@@ -4,7 +4,9 @@ from app.cinema.hall import CinemaHall
 from app.cinema.bar import CinemaBar
 
 
-def cinema_visit(customers: list, hall_number: int, cleaner: str, movie: str):
+def cinema_visit(
+    customers: list, hall_number: int, cleaner: str, movie: str
+) -> None:
     customers_obj = [
         Customer(name=customer.get("name"), food=customer.get("food"))
         for customer in customers
